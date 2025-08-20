@@ -19,13 +19,20 @@ public class SumOfEvenNumbersInRangeScript : MonoBehaviour
     {
         int sum = 0;
 
-        for (int i = 7; i < 21; i++)
+        for (int i = min; i < max; i++)
         {
             if (i % 2 == 0)
             { 
                 sum += i;
             }
         }
+
+        //Продвинутое решение:
+        //int start = min % 2 == 0 ? min : min + 1;
+        //for (int i = start; i <= max; i += 2)
+        //{
+        //    sum += i;
+        //}
 
         return sum;
     }

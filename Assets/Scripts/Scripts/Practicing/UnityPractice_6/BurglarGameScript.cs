@@ -88,7 +88,7 @@ public class BurglarGameScript : MonoBehaviour
     {
         CalculateCurrentPinsNumbersOnDrillButtonClicked();
         PinNumbersCheck();
-        DisplayCurrentPinsNumbersOnDrillButtonClicked();
+        DisplayCurrentPinsNumbers();
         ChangeState();
     }
 
@@ -96,7 +96,7 @@ public class BurglarGameScript : MonoBehaviour
     {
         CalculateCurrentPinsNumbersOnHammerButtonClicked();
         PinNumbersCheck();
-        DisplayCurrentPinsNumbersOnHammerButtonClicked();
+        DisplayCurrentPinsNumbers();
         ChangeState();
     }
 
@@ -104,7 +104,7 @@ public class BurglarGameScript : MonoBehaviour
     {
         CalculateCurrentPinsNumbersOnLockpickButtonClicked();
         PinNumbersCheck();
-        DisplayCurrentPinsNumbersOnLockpickButtonClicked();
+        DisplayCurrentPinsNumbers();
         ChangeState();
     }
 
@@ -140,38 +140,16 @@ public class BurglarGameScript : MonoBehaviour
         thirdPinText.text = originThirdPinNumber.ToString();
     }
 
-    private void DisplayCurrentPinsNumbersOnDrillButtonClicked()
+    private void DisplayCurrentPinsNumbers()
     {
-        if (IsDrillButtonClicked)
-        {
+
             firstPinText.text = currentFirstPinNumber.ToString();
             secondPinText.text = currentSecondPinNumber.ToString();
             thirdPinText.text = currentThirdPinNumber.ToString();
-        }
+
 
     }
 
-    private void DisplayCurrentPinsNumbersOnHammerButtonClicked()
-    {
-        if (IsHammerButtonClicked)
-        {
-            firstPinText.text = currentFirstPinNumber.ToString();
-            secondPinText.text = currentSecondPinNumber.ToString();
-            thirdPinText.text = currentThirdPinNumber.ToString();
-        }
-
-    }
-
-    private void DisplayCurrentPinsNumbersOnLockpickButtonClicked()
-    {
-        if (IsLockpickButtonClicked)
-        {
-            firstPinText.text = currentFirstPinNumber.ToString();
-            secondPinText.text = currentSecondPinNumber.ToString();
-            thirdPinText.text = currentThirdPinNumber.ToString();
-        }
-
-    }
 
     private void PinNumbersCheck()
     {
