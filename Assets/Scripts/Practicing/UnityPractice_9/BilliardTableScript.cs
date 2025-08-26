@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class BilliardTableScript : MonoBehaviour
 {
-    public Rigidbody BilliardBall;
+    public GameObject BilliardBall;
+    public Rigidbody Bb;
+    public float Power;
+    private Vector3 vec;
+
 
     void Start()
     {
-        BilliardBall.GetComponent<Rigidbody>();
-        BilliardBall.AddForce(-30, 0, 0, ForceMode.Impulse);
+        Bb = BilliardBall.GetComponent<Rigidbody>();
+        vec = new Vector3(-5, 0,0);
+
+        Bb.AddForce(vec * Power, ForceMode.Impulse);
     }
 
     
