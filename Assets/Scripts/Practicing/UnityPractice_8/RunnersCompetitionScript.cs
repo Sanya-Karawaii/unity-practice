@@ -11,10 +11,11 @@ public class RunnersCompetitionScript : MonoBehaviour
 
     [SerializeField] public GameObject Stick;
 
+    public MenuScript menuScript;
 
-    private GameObject MainRunner;
-    private GameObject LastRunner;
-    private GameObject FirstRunner;
+    public GameObject MainRunner;
+    public GameObject LastRunner;
+    public GameObject FirstRunner;
 
     public float Speed;
 
@@ -22,13 +23,13 @@ public class RunnersCompetitionScript : MonoBehaviour
     public bool ToRunner;
     public bool RestartCycle;
 
-    int i1 = 1;
-    int i2 = 0;
+    public int i1 = 1;
+    public int i2 = 0;
 
     float PassDistance;
 
-    private Vector3 NextPosition;
-    private Vector3 NextPoint;
+    public Vector3 NextPosition;
+    public Vector3 NextPoint;
 
     public Vector3[] RunnerPositions = { new Vector3(0.43f, -1.83f, 0.47f), new Vector3(2.89f, 0.11f, 0.47f), new Vector3(-0.81f, 3.05f, 0.47f), new Vector3(-3.15f, 1.15f, 0.47f) };
     public Vector3[] AdditionalPositions = { new Vector3(2.4f, -2.23f, 0.47f), new Vector3(1.13f, 0.98f, 0.47f), new Vector3(-2.53f, 2.37f, 0.47f), new Vector3(-1.48f, -0.97f, 0.47f) };
@@ -45,8 +46,10 @@ public class RunnersCompetitionScript : MonoBehaviour
         ToRunner = false;
     }
 
+
     void Update()
     {
+
         PassDistance = Vector3.Distance(MainRunner.transform.position, NextPosition);
         Stick.transform.SetParent(MainRunner.transform);
 

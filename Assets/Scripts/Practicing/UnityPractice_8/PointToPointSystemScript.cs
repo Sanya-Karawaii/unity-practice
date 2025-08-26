@@ -9,10 +9,10 @@ public class PointToPointSystemScript : MonoBehaviour
     public float Speed;
     public bool forward;
 
-    int i = 0;
+    public int i = 0;
     float distance;
 
-    private Vector3 target;
+    public Vector3 target;
     public Vector3[] positions = { new Vector3(-3.12f, 1.89f, -2.2f), new Vector3(0.14f, 3.67f, -2.2f), new Vector3(3.33f, 2.08f, -2.2f), new Vector3(2.54f, -1.43f, -2.2f), new Vector3(-2.22f, -1.43f, -2.2f) };
 
     void Start()
@@ -20,6 +20,7 @@ public class PointToPointSystemScript : MonoBehaviour
         target = positions[i];
 
     }
+
 
     void Update()
     {
