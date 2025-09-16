@@ -10,9 +10,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpPower = 5.0f;
     private Rigidbody playerRgbd;
     public Rigidbody ObjectParent;
+    public bool PlayerJumped;
+    private float Timer;
 
     void Start()
     {
+        Timer = 3.0f;
         ObjectParent = GetComponent<Rigidbody>();
         playerRgbd = GetComponent<Rigidbody>();
     }
@@ -24,7 +27,26 @@ public class PlayerMovement : MonoBehaviour
 
     public void JumpButton()
     {
-        ObjectParent.AddForce(0, jumpPower, 0, ForceMode.Impulse);
+        if (PlayerJumped == false)
+        {
+            PlayerJumped = true;
+            ObjectParent.AddForce(0, jumpPower, 0, ForceMode.Impulse);
+        }
+
+    }
+
+    public void FixedUpdate()
+    {
+        if (PlayerJumped == true)
+        {
+            Timer -= Time.deltaTime;
+
+            if (Timer <= 0)
+            {
+                PlayerJumped = false;
+                Timer = 1.0f;
+            }
+        }
     }
 
 #if UNITY_EDITOR

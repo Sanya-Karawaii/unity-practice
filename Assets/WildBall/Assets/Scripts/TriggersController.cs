@@ -34,7 +34,7 @@ public class TriggersController : MonoBehaviour
     {
         if (triggerObject.CompareTag("DoorActivationTrigger"))
         {
-            if (Input.GetKeyUp(KeyCode.Tab) || (Input.GetKeyUp(KeyCode.Tab) && Input.GetKeyUp(KeyCode.W)) || (Input.GetKeyUp(KeyCode.Tab) && Input.GetKeyUp(KeyCode.Space)))
+            if (Input.GetKeyUp(KeyCode.E) || (Input.GetKeyUp(KeyCode.E) && Input.GetKeyUp(KeyCode.W)) || (Input.GetKeyUp(KeyCode.E) && Input.GetKeyUp(KeyCode.Space)))
                 {
                     animCont.OnDoorActivation();
                 }

@@ -18,7 +18,7 @@ public class ButtonScript : MonoBehaviour
         {
             if (gameObject.name == "Button1")
             {
-                ActivatedObjects.SetActive(false);
+                ActivatedObjects.SetActive(true);
             }
             
             if (gameObject.name == "Button2")
