@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class CameraBehaviourScript : MonoBehaviour
 {
-    [SerializeField] private Transform playerPosition;
+    [SerializeField] public Transform playerPosition;
 
-    private Vector3 offset;
-    public Quaternion[] cameraPositions = { Quaternion.Euler(30.288f, 123.83f, 0), Quaternion.Euler(30.288f, 123.83f, 0), Quaternion.Euler(30.288f, 123.83f, 0) };
+    public Vector3 offset;
+    public Quaternion[] cameraRotations = { Quaternion.Euler(24.205f, 122.589f, 0), Quaternion.Euler(29.257f, -264.189f, 0), Quaternion.Euler(30.288f, 123.83f, 0) };
+    public Vector3[] cameraPositions = { new Vector3(17.82f, 33.26f, 130.91f), new Vector3(30.288f, 123.83f, 0), new Vector3(30.288f, 123.83f, 0) };
 
     private void Start()
     {
@@ -20,13 +21,4 @@ public class CameraBehaviourScript : MonoBehaviour
         transform.position = playerPosition.position + offset;
     }
 
-    private void OnTriggerEnter(Collider triggerObject)
-    {
-        Debug.Log(2);
-        //if (triggerObject.gameObject.name == "TriggerObject1")
-        //{
-        //    Debug.Log(2);
-        //    transform.rotation = cameraPositions[0];
-        //}
-    }
 }

@@ -63,15 +63,4 @@ public class MenuScriptUP11 : MonoBehaviour
         OnLevelButtonClick();
     }
 
-    public void OnLevel4Click()
-    {
-        Scene = 4;
-        OnLevelButtonClick();
-    }
-
-    public void OnLevel5Click()
-    {
-        Scene = 5;
-        OnLevelButtonClick();
-    }
 }

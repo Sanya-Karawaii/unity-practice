@@ -634,9 +634,10 @@ GameObject:
   - component: {fileID: 8947862736167112278}
   - component: {fileID: 6244457114042686615}
   - component: {fileID: 8013434405645741322}
+  - component: {fileID: 6271746745937420379}
   m_Layer: 0
   m_Name: FallenTrunk
-  m_TagString: Untagged
+  m_TagString: DoorActivationTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -705,8 +706,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.89, y: 0.53, z: 3.2137325}
-  m_Center: {x: 0, y: 0.048706368, z: -0.010927743}
+  m_Size: {x: 1.1120899, y: 0.53, z: 3.2137325}
+  m_Center: {x: -0.14974196, y: 0.048706368, z: -0.010927743}
 --- !u!114 &8013434405645741322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,6 +720,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb9d3cffbeb74744980edfcfe959269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6271746745937420379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390442056054757958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a633b695a3b925341a0ddf1c6925a0aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonPanel: {fileID: 0}
+  IsItDone: 0
 --- !u!1 &8528240369559658857
 GameObject:
   m_ObjectHideFlags: 0

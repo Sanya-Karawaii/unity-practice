@@ -141,11 +141,11 @@ GameObject:
   - component: {fileID: 4435845400915380505}
   - component: {fileID: 4435845400915380511}
   - component: {fileID: 4435845400915380510}
-  - component: {fileID: 4435845400915380509}
+  - component: {fileID: 8722625748698997242}
   - component: {fileID: 4435845400915380508}
-  - component: {fileID: 4435845400915380507}
   - component: {fileID: 4435845400915380506}
   - component: {fileID: 4435845400915380496}
+  - component: {fileID: 6665454118027060541}
   m_Layer: 0
   m_Name: Button1
   m_TagString: ButtonActivationTrigger
@@ -218,8 +218,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4435845400915380509
-CapsuleCollider:
+--- !u!65 &8722625748698997242
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -228,10 +228,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 3.3918488, z: 1.0000002}
+  m_Center: {x: 0.00000010903289, y: 0.6959283, z: -0.000000072688586}
 --- !u!95 &4435845400915380508
 Animator:
   serializedVersion: 5
@@ -253,20 +252,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!136 &4435845400915380507
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4435845400915380504}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.00000011920929, y: 0.0000038146973, z: -0.00000008940697}
 --- !u!114 &4435845400915380506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,4 +277,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsButtonActivated: 0
+  stop: 0
   ActivatedObjects: {fileID: 0}
+--- !u!65 &6665454118027060541
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4435845400915380504}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 3.3918488, z: 1.0000002}
+  m_Center: {x: 0.00000010903289, y: 0.6959283, z: -0.000000072688586}

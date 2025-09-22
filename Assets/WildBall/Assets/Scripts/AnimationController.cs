@@ -12,19 +12,10 @@ public class AnimationController : MonoBehaviour
 
     }
 
-
-    void Update()
+    public void PlatformAnimationActivation()
     {
-
+        anim.SetTrigger("AnimationActivation");
     }
-
-    //private void OnAnimationEnding()
-    //{
-    //    value = Random.Range(1, 4);
-    //    anim.SetTrigger("AnimationEnding");
-    //    anim.SetInteger("AnimationID", value);
-    //    Debug.Log(value);
-    //}
 
     public void OnDoorActivation()
     {
