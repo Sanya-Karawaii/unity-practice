@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class PauseScript : MonoBehaviour
+public class PauseScript1 : MonoBehaviour
 {
     public GameObject PausePanel;
     public GameObject MenuPanel;

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TriggersController : MonoBehaviour
 {
-    AnimationController animCont;
+    AnimationController1 animCont;
     ButtonScript BS;
     ButtonUI BUI;
     public CameraBehaviourScript CBS;
@@ -23,7 +23,7 @@ public class TriggersController : MonoBehaviour
 
     private void OnTriggerEnter(Collider triggerObject)
     {
-        animCont = triggerObject.GetComponent<AnimationController>();
+        animCont = triggerObject.GetComponent<AnimationController1>();
         BS = triggerObject.GetComponent<ButtonScript>();
         
 
