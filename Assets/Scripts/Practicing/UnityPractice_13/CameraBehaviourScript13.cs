@@ -9,6 +9,7 @@ public class CameraBehaviourScript13 : MonoBehaviour
     public Triggers13Script TS;
     private Vector3 offset;
     private Vector3 lastPosition;
+    private float smoothSpeed = 10.0f;
 
     private void Start()
     {
@@ -20,7 +21,7 @@ public class CameraBehaviourScript13 : MonoBehaviour
     {
         if (TS.Stop == false)
         {
-            transform.position = playerPosition.position + offset;
+            transform.position = Vector3.Lerp(transform.position, playerPosition.position + offset, Time.deltaTime * smoothSpeed);
             lastPosition = transform.position;
         }
         else
@@ -30,3 +31,4 @@ public class CameraBehaviourScript13 : MonoBehaviour
     }
 
 }
+

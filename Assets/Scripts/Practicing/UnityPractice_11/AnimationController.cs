@@ -24,7 +24,6 @@ public class AnimationController : MonoBehaviour
         value = Random.Range(1, 4);
         anim.SetTrigger("AnimationEnding");
         anim.SetInteger("AnimationID", value);
-        Debug.Log(value);
     }
 
 }

@@ -7,8 +7,7 @@ public class CameraBehaviourScript : MonoBehaviour
     [SerializeField] public Transform playerPosition;
 
     public Vector3 offset;
-    public Quaternion[] cameraRotations = { Quaternion.Euler(24.205f, 122.589f, 0), Quaternion.Euler(29.257f, -264.189f, 0), Quaternion.Euler(30.288f, 123.83f, 0) };
-    public Vector3[] cameraPositions = { new Vector3(17.82f, 33.26f, 130.91f), new Vector3(30.288f, 123.83f, 0), new Vector3(30.288f, 123.83f, 0) };
+    private float smoothSpeed = 10.0f;
 
     private void Start()
     {
@@ -18,7 +17,7 @@ public class CameraBehaviourScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position = playerPosition.position + offset;
+        transform.position = Vector3.Lerp(transform.position, playerPosition.position + offset, Time.deltaTime * smoothSpeed);
     }
 
 }

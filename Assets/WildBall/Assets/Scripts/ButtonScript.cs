@@ -1,74 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ButtonScript : MonoBehaviour
 {
+    private ButtonScript BS;
     public bool IsButtonActivated;
     public bool stop;
-    public GameObject ActivatedObjects;
+    [SerializeField] public GameObject ActivatedObjects;
 
     private Animator anim;
     private GameObject platform;
     private GameObject button;
 
+    public UnityEvent OnActivated;
+
     void Start()
     {
+        BS = GetComponent<ButtonScript>();
         IsButtonActivated = false;
         stop = false;
-        
+
     }
 
     void Update()
     {
         if (IsButtonActivated == true)
         {
-            if (gameObject.name == "Button1")
-            {
-                ActivatedObjects.SetActive(true);
-            }
-            
-            if (gameObject.name == "Button2")
-            {
-                anim = ActivatedObjects.GetComponent<Animator>();
-                anim.SetTrigger("AnimationActivation");
-            }
+            OnActivated.Invoke();
+            IsButtonActivated = false;
+        }
 
-            if (gameObject.name == "Button3")
-            {
-                ActivatedObjects.SetActive(true);
-            }
-
-            if (gameObject.name == "Button4")
-            {
-                ActivatedObjects.SetActive(true);
-            }
-
-            if (gameObject.name == "Button5")
-            {
-                ActivatedObjects.SetActive(false);
-            }
-
-            if (gameObject.name == "Button6")
-            {
-                ActivatedObjects.SetActive(true);
-            }
-
-            if (gameObject.name == "Button7" && stop == false)
-            {
-                ActivatedObjects.SetActive(true);
-                platform = GameObject.Find("StoneBridge");
-                anim = platform.GetComponent<Animator>();
-                anim.SetTrigger("AnimationActivation");
-            }
-
-            if (gameObject.name == "Button8")
-            {
-                stop = true;
-                button = GameObject.Find("ButtonParent (3)");
-                ActivatedObjects.SetActive(false);
-                button.SetActive(false);
-            }
+        if (ActivatedObjects == null)
+        {
+            return;
         }
     }
+
+
 }

@@ -9,10 +9,13 @@ public class TriggersController : MonoBehaviour
     ButtonScript BS;
     ButtonUI BUI;
     public CameraBehaviourScript CBS;
+    public Transform BallParent;
 
     public GameObject Camera;
 
-
+    private Vector3 direction;
+    private float speed = 5;
+    private float maxSpeed = 6.0f;
     private GameObject[] Enemy;
   
     public void Start()
@@ -73,7 +76,8 @@ public class TriggersController : MonoBehaviour
 
             foreach (GameObject enemy in Enemy)
             {
-                enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, transform.position, Time.deltaTime * 6);
+                direction = transform.position - enemy.transform.position;
+                enemy.GetComponent<Rigidbody>().velocity = Vector3.ClampMagnitude(direction * speed, maxSpeed);
 
             }
         }

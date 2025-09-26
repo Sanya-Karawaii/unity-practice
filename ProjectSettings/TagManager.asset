@@ -6,6 +6,13 @@ TagManager:
   tags:
   - DeathTrigger
   - Bonus
+  - Player_
+  - ButtonActivationTrigger
+  - FinishTrigger
+  - DoorActivationTrigger
+  - NoticingTrigger
+  - Enemy
+  - BackToMenu
   layers:
   - Default
   - TransparentFX

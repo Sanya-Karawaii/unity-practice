@@ -143,8 +143,8 @@ GameObject:
   - component: {fileID: 4435845400915380510}
   - component: {fileID: 8722625748698997242}
   - component: {fileID: 4435845400915380508}
-  - component: {fileID: 4435845400915380506}
-  - component: {fileID: 4435845400915380496}
+  - component: {fileID: 2648017211804405034}
+  - component: {fileID: 5620288785453553786}
   - component: {fileID: 6665454118027060541}
   m_Layer: 0
   m_Name: Button1
@@ -252,7 +252,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4435845400915380506
+--- !u!114 &2648017211804405034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,10 +261,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4435845400915380504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddb9d3cffbeb74744980edfcfe959269, type: 3}
+  m_Script: {fileID: 11500000, guid: e9788d6fc82f72f4c9bd91011f1a234a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4435845400915380496
+--- !u!114 &5620288785453553786
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -279,6 +279,9 @@ MonoBehaviour:
   IsButtonActivated: 0
   stop: 0
   ActivatedObjects: {fileID: 0}
+  OnActivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &6665454118027060541
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -31,22 +31,15 @@ public class PlayerMovement13 : MonoBehaviour
         {
             PlayerJumped = true;
             ObjectParent.AddForce(0, jumpPower, 0, ForceMode.Impulse);
+            StartCoroutine(JumpCooldown());
         }
 
     }
 
-    public void FixedUpdate()
+    private IEnumerator JumpCooldown()
     {
-        if (PlayerJumped == true)
-        {
-            Timer -= Time.deltaTime;
-
-            if (Timer <= 0)
-            {
-                PlayerJumped = false;
-                Timer = 1.0f;
-            }
-        }
+        yield return new WaitForSeconds(1.0f);
+        PlayerJumped = false;
     }
 
 #if UNITY_EDITOR
