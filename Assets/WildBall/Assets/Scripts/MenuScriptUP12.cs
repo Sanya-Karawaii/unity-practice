@@ -17,7 +17,6 @@ public class MenuScriptUP12 : MonoBehaviour
     public GameObject Level2;
     public GameObject Level3;
     public GameObject Level4;
-    public GameObject Level5;
 
 
     void Start()
@@ -60,6 +59,12 @@ public class MenuScriptUP12 : MonoBehaviour
     public void OnLevel3Click()
     {
         Scene = 3;
+        OnLevelButtonClick();
+    }
+
+    public void OnLevel4Click()
+    {
+        Scene = 4;
         OnLevelButtonClick();
     }
 

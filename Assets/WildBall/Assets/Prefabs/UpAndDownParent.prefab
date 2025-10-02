@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 6624257976327376760}
   - component: {fileID: 6624257976327376761}
   - component: {fileID: 6624257976327376762}
-  - component: {fileID: 6624257976327376741}
   m_Layer: 0
   m_Name: UpAndDown
   m_TagString: Untagged
@@ -141,7 +140,7 @@ Animator:
   m_GameObject: {fileID: 6624257976327376767}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9b5889175754ac54abcea28c03cfe6db, type: 2}
+  m_Controller: {fileID: 9100000, guid: 81ba9c1acb44d7f4a993b631e9503f92, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -152,15 +151,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6624257976327376741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6624257976327376767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddb9d3cffbeb74744980edfcfe959269, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

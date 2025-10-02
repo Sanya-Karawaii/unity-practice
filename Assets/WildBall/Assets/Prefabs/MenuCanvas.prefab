@@ -281,7 +281,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2220641384994141753}
+      - m_Target: {fileID: 7596203158223607410}
         m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
         m_MethodName: OnPauseButtonClick
         m_Mode: 1
@@ -291,7 +291,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &1573561916153708284
 GameObject:
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2220641384994141753}
+      - m_Target: {fileID: 7596203158223607410}
         m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
         m_MethodName: OnBackToGameButtonClick
         m_Mode: 1
@@ -439,7 +439,7 @@ GameObject:
   - component: {fileID: 3720745994578897117}
   - component: {fileID: 1299346720687670213}
   - component: {fileID: 7555492380379078220}
-  - component: {fileID: 2220641384994141753}
+  - component: {fileID: 7596203158223607410}
   m_Layer: 5
   m_Name: MenuCanvas
   m_TagString: Untagged
@@ -529,7 +529,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2220641384994141753
+--- !u!114 &7596203158223607410
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -538,7 +538,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3313246216589477619}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 476549e69eb02204c87708584441dad5, type: 3}
+  m_Script: {fileID: 11500000, guid: b74485bdd11674a409e31105113b596c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PausePanel: {fileID: 7874846867943076239}
@@ -1086,7 +1086,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2220641384994141753}
+      - m_Target: {fileID: 7596203158223607410}
         m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
         m_MethodName: OnReloadLevelButton
         m_Mode: 1
@@ -1499,7 +1499,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2220641384994141753}
+      - m_Target: {fileID: 7596203158223607410}
         m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
         m_MethodName: OnBackToMenuButton
         m_Mode: 1

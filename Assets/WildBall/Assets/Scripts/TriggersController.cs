@@ -7,9 +7,13 @@ public class TriggersController : MonoBehaviour
 {
     AnimationController1 animCont;
     ButtonScript BS;
+    BonusScript BoS;
     ButtonUI BUI;
+    Animator anim;
+    [SerializeField] public PauseScript1 PS;
     public CameraBehaviourScript CBS;
     public Transform BallParent;
+
 
     public GameObject Camera;
 
@@ -17,9 +21,11 @@ public class TriggersController : MonoBehaviour
     private float speed = 5;
     private float maxSpeed = 6.0f;
     private GameObject[] Enemy;
-  
+    public bool Stop;
+
     public void Start()
     {
+        Stop = false;
         Enemy = GameObject.FindGameObjectsWithTag("Enemy");
 
     }
@@ -27,8 +33,10 @@ public class TriggersController : MonoBehaviour
     private void OnTriggerEnter(Collider triggerObject)
     {
         animCont = triggerObject.GetComponent<AnimationController1>();
+        anim = triggerObject.GetComponent<Animator>();
         BS = triggerObject.GetComponent<ButtonScript>();
-        
+        BoS = triggerObject.GetComponent<BonusScript>();
+
 
         if (triggerObject.CompareTag("DeathTrigger"))
         {
@@ -37,7 +45,18 @@ public class TriggersController : MonoBehaviour
 
         if (triggerObject.CompareTag("FinishTrigger"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (SceneManager.GetActiveScene().buildIndex == 4)
+            {
+                Stop = true;
+                PS.GameWin();
+                
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+                
+
         }
 
         if (triggerObject.CompareTag("BackToMenu"))
@@ -49,6 +68,13 @@ public class TriggersController : MonoBehaviour
         {
                 animCont.OnButtonActivation();
                 BS.IsButtonActivated = true;
+        }
+
+        if (triggerObject.CompareTag("Bonus"))
+        {
+                anim.SetTrigger("AnimationActivation");
+                BoS.Play();
+                Destroy(triggerObject.gameObject, 2);
         }
 
     }
