@@ -50,3 +50,27 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 321434825
+    locked: 0
+  - name: Ground
+    uniqueID: 4264581841
+    locked: 0
+  - name: BackVegetation
+    uniqueID: 2858202233
+    locked: 0
+  - name: Building
+    uniqueID: 2268886877
+    locked: 0
+  - name: Objects
+    uniqueID: 3343959151
+    locked: 0
+  - name: NPC
+    uniqueID: 1425249453
+    locked: 0
+  - name: Character
+    uniqueID: 502671553
+    locked: 0
+  - name: FrontVegetation
+    uniqueID: 3457622521
+    locked: 0
