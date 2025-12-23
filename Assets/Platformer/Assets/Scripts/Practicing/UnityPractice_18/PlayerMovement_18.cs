@@ -82,7 +82,7 @@ public class PlayerMovement_18 : MonoBehaviour
     public void Bounce()
     {
         isGettingHit = true;
-        rb.velocity = new Vector2(-4 * Input.GetAxis(GlobalStringVars.hor), rb.velocity.y);
+        rb.velocity = new Vector2(-4 * Input.GetAxis(GlobalStringVars_18.hor), rb.velocity.y);
         
     }
 

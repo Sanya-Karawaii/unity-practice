@@ -25,14 +25,14 @@ public class DamageDealer_18 : MonoBehaviour
             {
                 if (gameObject.tag != "Player")
                 {
-                    col.gameObject.GetComponent<HealthScript>().TakeDamage(damage, col);
+                    col.gameObject.GetComponent<HealthScript_18>().TakeDamage(damage, col);
 
                 }
                 else
                 {
                     if (attCont.isAttacking == true)
                     {
-                        col.gameObject.GetComponent<HealthScript>().TakeDamage(damage, col);
+                        col.gameObject.GetComponent<HealthScript_18>().TakeDamage(damage, col);
                     }
                 }
 

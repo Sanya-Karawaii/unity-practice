@@ -10,7 +10,7 @@ public class DamageDealer_Learning_18 : MonoBehaviour
     {
         if (collision.CompareTag("Damageable"))
         {
-            collision.gameObject.GetComponent<Health_Learning>().TakeDamage(damage);
+            collision.gameObject.GetComponent<Health_Learning_18>().TakeDamage(damage);
         }
 
         Destroy(gameObject);

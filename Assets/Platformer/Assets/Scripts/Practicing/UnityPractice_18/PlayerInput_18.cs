@@ -21,9 +21,9 @@ public class PlayerInput_18 : MonoBehaviour
 
     private void Update()
     {
-        horizontalDirection = Input.GetAxis(GlobalStringVars.hor);
-        isJumpButtonPressed = Input.GetButtonDown(GlobalStringVars.jump);
-        isAttackButtonPressed = Input.GetButtonDown(GlobalStringVars.attack1);
+        horizontalDirection = Input.GetAxis(GlobalStringVars_18.hor);
+        isJumpButtonPressed = Input.GetButtonDown(GlobalStringVars_18.jump);
+        isAttackButtonPressed = Input.GetButtonDown(GlobalStringVars_18.attack1);
 
         if (isAttackButtonPressed)
         {
